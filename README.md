@@ -23,6 +23,7 @@
 
 
 *missed this log*
+
 **October 9 - 13, 2017**
 
   Started robotics club, learning how to use a breadboard and arduinos
@@ -37,6 +38,7 @@
 
 
 *missed this log*
+
 **October 23 - 27, 2017**
 
   Learned how to use sensors in Robotics club. Looking to start building a robot soon.
