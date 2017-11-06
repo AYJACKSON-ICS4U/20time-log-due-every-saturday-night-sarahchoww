@@ -1,7 +1,7 @@
 # 20Time-ICS4U
 
-#September 17 - 23, 2017:
-  Chose my 20 time project
+##**September 17 - 23, 2017:**
+  ###Chose my 20 time project
   Project: create a robot to complete easy tasks (ie: maze)
   joined the robotics cluub at AYJ, hopefully helps me complete the project
     Two mentors from the robotics club to help my 20 time project
