@@ -13,7 +13,7 @@
 
 
 
-**October 2-5, 2017**
+**October 2-5, 2017:**
   Thought about the project, aim to do more research
   Talking to the head of club and have yet to receive a response
 
@@ -21,12 +21,12 @@
 
 *missed this log*
 
-**October 9 - 13, 2017**
+**October 9 - 13, 2017:**
   Started robotics club, learning how to use a breadboard and arduinos
 
 
 
-**October 16 - 20, 2017**
+**October 16 - 20, 2017:**
   Continued with robotics club and controlled the voltage going through to the lightbulb on the breadboard
   Learning about sensors next week
 
@@ -34,13 +34,11 @@
 
 *missed this log*
 
-**October 23 - 27, 2017**
-
+**October 23 - 27, 2017:**
   Learned how to use sensors in Robotics club. Looking to start building a robot soon.
 
 
 
-**October 30 - November 3**
-
+**October 30 - November 3:**
   Robotics club was cancelled this week
   Have yet to purchase my own arduino
