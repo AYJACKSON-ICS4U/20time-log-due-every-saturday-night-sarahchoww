@@ -2,8 +2,8 @@
 
 **September 17 - 23, 2017:**
   Chose my 20 time project
-  Project: create a robot to complete easy tasks (ie: maze)
-  joined the robotics club at AYJ, hopefully helps me complete the project
+  Project: create a robot to complete easy tasks (ie: maze).
+  joined the robotics club at AYJ, hopefully helps me complete the project.
   Two mentors from the robotics club to help my 20 time project
   
   
@@ -14,7 +14,7 @@
 
 
 **October 2-5, 2017:**
-  Thought about the project, aim to do more research
+  Thought about the project, aim to do more research.
   Talking to the head of club and have yet to receive a response
 
 
@@ -26,7 +26,7 @@
 
 
 **October 16 - 20, 2017:**
-  Continued with robotics club and controlled the voltage going through to the lightbulb on the breadboard
+  Continued with robotics club and controlled the voltage going through to the lightbulb on the breadboard.
   Learning about sensors next week
 
 
@@ -38,5 +38,5 @@
 
 
 **October 30 - November 3:**
-  Robotics club was cancelled this week
+  Robotics club was cancelled this week.
   Have yet to purchase my own arduino
