@@ -43,3 +43,5 @@
   
  **November 6 - November 10:**
   Got my own Arduino Nano board so I advance in my progress for my 20Time project instead of just attending the weekly Robotics Club meetings. Tried to download the Arduino program at home on the IMac but the arduino nano couldn't be recognized. This is a common error amongst other users and the solution is tedious and involves changing code in the computer. Tried to download Arduino program on other Windows computers at home but it either didn't work because the computer was too old or it downloaded and the arduino couldn't be recognized within the system. Just attempted to plug it into the school computer and, again, the port wasn't recognized in the computer. Will look to finding another cord since that may be the source of error and if that doesn't work then I'll ask Geoff, the head of the Robotics Club, tomorrow at the meeting.
+  
+  *update* The Arduino program now recognizes the port and the arduino works! I was just updating my log and then I checked again (10 minutes after I plugged the arduino in) and it works now. Need to try this at home.
