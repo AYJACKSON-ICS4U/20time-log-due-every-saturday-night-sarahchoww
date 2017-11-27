@@ -47,3 +47,9 @@
   *update:* The Arduino program now recognizes the port and the arduino works! I was just updating my log and then I checked again (10 minutes after I plugged the arduino in) and it works now. Need to try this at home.
   
   *November 14:* Have yet to try the arduino at home again but Robotics Club has a meeting today so I will ask Geoff how I'd be able to download the program on an IMac.
+
+  **November 13 - 17:**
+    Still trying to figure out how to download the program at home.
+    
+  **November 20 - 24:**
+    Will ask my sister who has downloaded the program on her mac how she did it
