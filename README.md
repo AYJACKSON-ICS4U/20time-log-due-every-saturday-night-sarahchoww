@@ -53,3 +53,6 @@
     
   **November 20 - 24:**
     Will ask my sister who has downloaded the program on her mac how she did it
+
+  **November 27 - Dec 1:**
+    Learned how a servo works from Robotics Club. Got an arduino uno, works fine on my computer with no error. Attached the servo that I borrowed from Robotics Club and used the "Sweep" example from the sketchbook. I altered the delay so it would run smoothly.
