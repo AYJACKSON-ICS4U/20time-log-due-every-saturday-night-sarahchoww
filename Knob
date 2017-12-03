@@ -196,3 +196,67 @@ if (Serial.available() > 0){ //if data was entered into the serial monitor
   }
 }
 
+
+Added safety nets such as if the user enters a value out of the range.
+
+Current Code:
+
+/*
+ Controlling a servo position using a potentiometer (variable resistor)
+ by Michal Rinott <http://people.interaction-ivrea.it/m.rinott>
+
+ modified on 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Knob
+*/
+
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+
+int degree [3]; //changed char to int to match the Serial.parseInt, array of degrees the servo can switch to
+int i = 0;
+int p = 0;
+bool goodNum = false; //make sure the values entered are in range of 0 - 179
+
+void setup() {
+  Serial.begin (9600);
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+  Serial.println ("Enter 3 values between 0 and 175 one at a time");
+}
+
+void loop() {
+  while (goodNum == false) //keep running if the number entered isn't in range
+  {
+    if (Serial.available() > 0) //an entry has been made
+    {
+    degree [i] = Serial.parseInt(); // the value entered in by the user is added to the array
+    Serial.println ("Entry "); //check to make sure it was entered correctly
+    Serial.print (i + 1);
+    Serial.print(" ");
+    Serial.print(degree[i]);
+
+    if ((degree[i] >= 0) && (degree[i] <= 175)) //ensures all numbers entered are in the range of 0 - 175
+    {
+      goodNum = true; //get out of the while loop
+    }
+    else if ((degree[i] < 0) || (degree[i] > 175)) //in value isn't in range
+    {
+      Serial.println ("That number is invalid. Please type in another value.");
+    }
+    }
+  }
+    // put your main code here, to run repeatedly:
+    if (i == 2) //runs if 3 entries have been made, the servo will run in sequence of the entered degrees
+    { 
+      for (p = 0; p < 3; p++)
+      {
+        myservo.write(degree[p]); //transfers data to servo based on array number p
+        delay(500); //delay of 500 milliseconds
+      }
+    }
+    i += 1; //switch place in array, increase by 1
+    goodNum = false; //reset the boolean for next incomig variable
+
+}
+
