@@ -85,3 +85,58 @@ void loop() {
  
 }
 
+
+
+
+Trying to get a series of degrees entered and then have the servo run the degrees consecutively. Have yet to achieve so,
+the servo only runs one of the entries.
+
+Current code:
+
+/*
+ Controlling a servo position using a potentiometer (variable resistor)
+ by Michal Rinott <http://people.interaction-ivrea.it/m.rinott>
+
+ modified on 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Knob
+*/
+
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+
+int val;    // variable to read the value from the analog pin
+int degree [3]; //changed char to int to match the Serial.parseInt, array of degrees the servo can switch to
+int i = 1;
+int p = 1;
+
+void setup() {
+  Serial.begin (9600);
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+
+if (Serial.available() > 0){ //if data was entered into the serial monitor
+  degree [i] = Serial.parseInt(); // the value entered in by the user is added to the array
+  Serial.print("You inputted "); //check to make sure it was entered correctly
+  Serial.println(degree[i]);
+  Serial.println("This is i"); //check var i
+  Serial.println(i);
+  
+    // put your main code here, to run repeatedly:
+    if (i == 3) { //runs if 3 entries have been made, the servo will run in sequence of the entered degrees
+      
+      for (p = 1; p <= 3; p++)
+      {
+        myservo.write(degree[p]); //transfers data to servo based on array number p
+        Serial.println(degree[p]);
+         
+         delay(15); //delay of 3 milliseconds
+      }
+    }
+  
+    i += 1; //switch place in array, increase by 1
+  }
+}
