@@ -1,0 +1,30 @@
+Learning what Serial.read() is:
+
+The computer reads the input from the user through the serial monitor. I searched up how it worked and got the following code:
+
+
+char degree = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  if (Serial.available() > 0) {
+    degree = Serial.read();
+    Serial.print("You inputted ");
+    Serial.println(degree);
+  }
+}
+
+
+This code takes in the input from the user and then says "You inputted: [value inputted]"
+
+I had some trouble with this code because the value outputted would always be 48 values greater than what I inputted. I then discovered
+that it was because in ACSII, 48 = 0. I then switched "int degree= 0;" to "char degree = 0" so the value outputted would be
+exactly what was inputted.
+
+I am now learning how to input more than one digit at a time through the Serial.read() since it would separate the values.
+Ex: *input 10*  outputs: "You inputted 1", "You inputted 0"
