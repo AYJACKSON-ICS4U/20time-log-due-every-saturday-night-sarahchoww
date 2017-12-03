@@ -140,3 +140,59 @@ if (Serial.available() > 0){ //if data was entered into the serial monitor
     i += 1; //switch place in array, increase by 1
   }
 }
+
+
+
+Got my latest project working where the serial monitor controls the servo's degrees. In the last code above, two errors were
+present. 1. The array was for 3 spots but when I ran the myservo.write(degree[p]), p was initially set to 1, which is the 
+second spot in the array, not the first. 2. When I'd run the code, the servo would only run one degree, or so it seemed, but
+the error was really that the delay was too short so I had to longer to delay to clearly see the different angles.
+
+Current Code:
+
+/*
+ Controlling a servo position using a potentiometer (variable resistor)
+ by Michal Rinott <http://people.interaction-ivrea.it/m.rinott>
+
+ modified on 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Knob
+*/
+
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+
+int val;    // variable to read the value from the analog pin
+int degree [3]; //changed char to int to match the Serial.parseInt, array of degrees the servo can switch to
+int i = 0;
+int p = 0;
+
+void setup() {
+  Serial.begin (9600);
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+
+if (Serial.available() > 0){ //if data was entered into the serial monitor
+  degree [i] = Serial.parseInt(); // the value entered in by the user is added to the array
+  Serial.print("You inputted "); //check to make sure it was entered correctly
+  Serial.println (degree[i]);
+  Serial.print ("This is i "); //check var i
+  Serial.println (i + 1);
+  
+    // put your main code here, to run repeatedly:
+    if (i == 2) { //runs if 3 entries have been made, the servo will run in sequence of the entered degrees
+      for (p = 0; p < 3; p++)
+      {
+        myservo.write(degree[p]); //transfers data to servo based on array number p
+        Serial.println(degree[p]);
+        delay(500); //delay of 500 milliseconds
+      }
+    }
+  
+    i += 1; //switch place in array, increase by 1
+  }
+}
+
