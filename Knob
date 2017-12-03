@@ -1,0 +1,41 @@
+Knob is another of the arduino's examples found in sketchbook. It's coded to be set up with a potentiometer but I don't own
+one at home so I'm trying to mix the Serial.read with the Knob idea. I want the user to input a value into the serial monitor
+using the Serial.read() and that value controls the degree of the servo.
+
+Current code:
+
+/*
+ Controlling a servo position using a potentiometer (variable resistor)
+ by Michal Rinott <http://people.interaction-ivrea.it/m.rinott>
+
+ modified on 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Knob
+*/
+
+#include <Servo.h>
+
+Servo myservo;  // create servo object to control a servo
+
+int val;    // variable to read the value from the analog pin
+char degree;
+
+void setup() {
+  Serial.begin (9600);
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+    // put your main code here, to run repeatedly:
+  if (Serial.available() > 0) {
+    degree = Serial.read();
+    Serial.print("You inputted ");
+    Serial.println(degree);
+  }
+  
+  myservo.write(degree);                  // sets the servo position according to the scaled value
+  delay(3);                           // waits for the servo to get there
+}
+
+This code works but similar to the Serial.read() problem, the computer only intakes 1 digit. My next task is to learn how it
+can read more than 1 digit
