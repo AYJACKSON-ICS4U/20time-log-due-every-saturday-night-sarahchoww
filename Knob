@@ -74,13 +74,13 @@ void loop() {
   //val = map(val, 0, 1023, 0, 180);     // scale it to use it with the servo (value between 0 and 180)
 
     // put your main code here, to run repeatedly:
-  if (Serial.available() > 0) {
-    degree = Serial.parseInt();
+  if (Serial.available() > 0) { //make sure that an entry has been made by the user
+    degree = Serial.parseInt(); //allows more than one digit to be entered
     Serial.print("You inputted ");
     Serial.println(degree);
   }
 
-  myservo.write(degree);
+  myservo.write(degree); //transfers data to servo
   delay(3);
  
 }
