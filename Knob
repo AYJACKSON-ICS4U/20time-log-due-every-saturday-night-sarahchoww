@@ -214,7 +214,7 @@ Current Code:
 
 Servo myservo;  // create servo object to control a servo
 
-int degree [3]; //changed char to int to match the Serial.parseInt, array of degrees the servo can switch to
+int degree [10]; //changed char to int to match the Serial.parseInt, array of degrees the servo can switch to
 int i = 0;
 int p = 0;
 bool goodNum = false; //make sure the values entered are in range of 0 - 179
