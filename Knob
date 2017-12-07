@@ -222,7 +222,7 @@ bool goodNum = false; //make sure the values entered are in range of 0 - 179
 void setup() {
   Serial.begin (9600);
   myservo.attach(9);  // attaches the servo on pin 9 to the servo object
-  Serial.println ("Enter 3 values between 0 and 175 one at a time");
+  Serial.println ("Enter 10 values between 0 and 175 one at a time");
 }
 
 void loop() {
@@ -247,7 +247,7 @@ void loop() {
     }
   }
     // put your main code here, to run repeatedly:
-    if (i == 2) //runs if 3 entries have been made, the servo will run in sequence of the entered degrees
+    if (i == 10) //runs if 10 entries have been made, the servo will run in sequence of the entered degrees
     { 
       for (p = 0; p < 3; p++)
       {
