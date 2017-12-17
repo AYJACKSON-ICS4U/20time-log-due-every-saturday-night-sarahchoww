@@ -56,3 +56,9 @@
 
   **November 27 - Dec 1:**
     Learned how a servo works from Robotics Club. Got an arduino uno, works fine on my computer with no error. Attached the servo that I borrowed from Robotics Club and used the "Sweep" example from the sketchbook. I altered the delay so it would run smoothly.
+    
+  **Dec 3 - 9:**
+    Plan to go and purchase external parts
+    
+  **Dec 10 -16:**
+    Bought an LCD Display, Sound Sensor and a breadboard. Learning to connect and attach the external parts to the arduino y using Youtube videos.
